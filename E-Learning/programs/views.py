@@ -32,7 +32,6 @@ class StaffRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
 
 
 def index(request):
-    # Landing behavior: render a rich interactive homepage showing featured courses and instructors.
     featured_courses = Course.objects.all()[:6]
     featured_instructors = Instructor.objects.all()[:6]
     context = {
